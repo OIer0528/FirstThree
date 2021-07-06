@@ -9,8 +9,8 @@ from flask import jsonify
 app = Flask(__name__, template_folder="")
 
 # 全局设置
-HOST, PORT = "localhost", "5000"
-# HOST, PORT = "0.0.0.0", "5000"
+# HOST, PORT = "localhost", "5000"
+HOST, PORT = "0.0.0.0", "5000"
 
 @app.route('/')
 def index():

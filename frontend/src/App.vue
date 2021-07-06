@@ -5,13 +5,11 @@
         <h1>第一个 Three.js 示例项目</h1>
       </el-header>
       <el-main>
-        <div class="DemoArea">
-          <ThreeDemo v-bind:animationSpeed="animationSpeed" />
-        </div>
-        <div class="SettingArea">
-          <span>动画速度：{{ animationSpeed }}</span>
-          <el-slider v-model="animationSpeed"></el-slider>
-        </div>
+          <el-row>
+            <el-col :xs="{span:24,offset:0}" :sm="{span:16,offset:4}" :md="{span:12,offset:6}">
+              <ThreeDemo />
+            </el-col>
+          </el-row>
       </el-main>
       <el-footer> <Footer /> </el-footer>
     </el-container>
@@ -27,9 +25,6 @@ export default {
   components: {
     Footer,
     ThreeDemo,
-  },
-  data() {
-    return { animationSpeed: 20 };
   },
 };
 </script>
@@ -52,25 +47,6 @@ body {
   background: rgb(83, 168, 255);
   color: #ffffff;
 }
-
-#app .el-main .DemoArea {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#app .el-main .SettingArea {
-  display: flex;
-  justify-content: space-evenly;
-  width: 500px;
-  margin: 0 auto;
-}
-
-#app .el-main .SettingArea .el-slider {
-  width: 300px;
-}
-
 
 #app .el-footer {
   background: rgb(179, 216, 255);
